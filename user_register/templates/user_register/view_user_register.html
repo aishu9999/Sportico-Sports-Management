@@ -1,0 +1,43 @@
+
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title>VIEW USER REGISTER</title>
+	</head>
+<body><h1>VIEW USER REGISTER</h1>
+	<table border="1">
+		<tr>
+			<th>Name</th>
+			<th>Age</th>
+			<th>Gender</th>
+			<th>Address</th>
+			<th>Height</th>
+			<th>Weight</th>
+			<th>Physical</th>
+			<th>Contact</th>
+			<th>Email</th>
+            <th>Status</th>
+
+		</tr>
+        {% for i in x %}
+		<tr>
+			<td>{{ i.username }}</td>
+			<td>{{ i.age }}</td>
+			<td>{{ i.gender }}</td>
+			<td>{{ i.address }}</td>
+			<td>{{ i.height }}</td>
+			<td>{{ i.weight }}</td>
+			<td>{{ i.physical }}</td>
+			<td>{{ i.contact }}</td>
+			<td>{{ i.email }}</td>
+            <td>{{ i.status }}</td>
+
+			<td><a href="{% url 'au' idd=i.user_id %}">approve</a></td>
+			<td><a href="{% url 'ru' idd=i.user_id %}">reject</a></td>
+		</tr>
+         {% endfor %}
+	</table>
+
+</body>
+</html>

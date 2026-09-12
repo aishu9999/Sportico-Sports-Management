@@ -1,0 +1,29 @@
+{% extends 'temp/User.html' %}
+{% block base %}
+<!DOCTYPE html>
+<html>
+<head>
+	<title>VIEW DELIVERY</title>
+	</head>
+<body>
+<center><h1>VIEW DELIVERY</h1>
+	<table border="1" class="table table-striped" style="width: 60%">
+		<tr>
+			<th>Item name</th>
+			<th>Delivery Status</th>
+			<th>Date</th>
+			<th>Time</th>
+		</tr>
+        {% for i in x %}
+		<tr>
+			<td>{{ i.order.product.name }}</td>
+			<td>{{ i.delivery_status }}</td>
+			<td>{{ i.date }}</td>
+			<td>{{ i.time }}</td>
+		</tr>
+         {% endfor %}
+	</table>
+</center>
+</body>
+</html>
+{% endblock %}

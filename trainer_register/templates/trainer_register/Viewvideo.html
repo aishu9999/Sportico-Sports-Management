@@ -1,0 +1,34 @@
+{% extends 'temp/User.html' %}
+{% block base %}
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body><center>
+    <h1>VIEW Video</h1>
+	<table border="1" class="table table-striped" style="width: 60%">
+		<tr>
+			<th>Name</th>
+			<th>Video</th>
+			<th></th>
+
+
+		</tr>
+        {% for i in kk %}
+		<tr>a
+			<td>{{ i.trainer.name }}</td>
+			<td>{{ i.video }}</td>
+			<td><a href="/trainer_register/watch/{{ i.video_id }}/#ff" class="btn btn-outline-primary">Watch</a> </td>
+
+
+		</tr>
+         {% endfor %}
+	</table>
+</center>
+</body>
+</html>
+{% endblock %}

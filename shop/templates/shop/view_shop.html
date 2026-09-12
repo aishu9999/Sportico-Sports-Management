@@ -1,0 +1,31 @@
+{% extends 'temp/admin.html' %}
+{% block base %}
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title>VIEW SHOP</title>
+	</head>
+<body><center><h1>VIEW SHOP</h1>
+	<table border="1" class="table table-striped" style="width: 50%; text-align: center">
+		<tr>
+			<th>Shop name</th>
+			<th>Address</th>
+            <th></th>
+            <th></th>
+
+
+		</tr>
+        {% for i in x %}
+		<tr>
+			<td>{{ i.shop_name }}</td>
+			<td>{{ i.address }}</td>
+			<td><a href="/shop/apr/{{ i.shop_id }}/#ff" class="btn btn-outline-success">Approve</a></td>
+			<td><a href="/shop/rjctshop/{{ i.shop_id }}/#ff" class="btn btn-outline-danger">Reject</a></td>
+		</tr>
+         {% endfor %}
+	</table>
+</center>
+</body>
+</html>
+{% endblock %}

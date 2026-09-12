@@ -1,0 +1,34 @@
+{% extends 'temp/Shop.html' %}
+{% block base %}
+<!DOCTYPE html>
+<html>
+<head>
+	<title>VIEW PAYMENT</title>
+	</head>
+<body><h1>VIEW PAYMENT</h1>
+	<table border="1" class="table table-striped">
+		<tr>
+			<th>User Name</th>
+			<th>Card Holder Name</th>
+            <th>Account Number</th>
+            <th>Cvv</th>
+			<th>Amount</th>
+			<th>Date</th>
+			<th>Time</th>
+		</tr>
+        {% for i in x %}
+		<tr>
+			<td>{{ i.user.username }}</td>
+			<td>{{ i.cardholder_name }}</td>
+			<td>{{ i.account_no }}</td>
+            <td>{{ i.cvv }}</td>
+            <td>{{ i.amount }}</td>
+			<td>{{ i.date }}</td>
+			<td>{{ i.time }}</td>
+		</tr>
+         {% endfor %}
+	</table>
+
+</body>
+</html>
+{% endblock %}

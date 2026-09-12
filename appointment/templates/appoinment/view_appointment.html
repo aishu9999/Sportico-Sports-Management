@@ -1,0 +1,30 @@
+{% extends 'temp/Trainer.html' %}
+{% block base %}
+<!DOCTYPE html>
+<html>
+<head>
+	<title>VIEW APPOINTMENT</title>
+	</head>
+<body><center><h1>VIEW APPOINTMENT</h1>
+	<table border="1" class="table table-striped" style="width: 80%">
+		<tr>
+			<th>User Name</th>
+			<th>Trainer Name</th>
+			<th>Date</th>
+			<th>Time</th>
+{#			<th>Payment</th>#}
+		</tr>
+        {% for i in x %}
+		<tr>
+			<td>{{ i.user.username }}</td>
+			<td>{{ i.trainer.name }}</td>
+			<td>{{ i.date }}</td>
+			<td>{{ i.time }}</td>
+{#			<td>{{ i.payment.amount }}</td>#}
+		</tr>
+        {% endfor %}
+	</table>
+</center>
+</body>
+</html>
+{% endblock %}

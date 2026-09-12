@@ -1,0 +1,24 @@
+{% extends 'temp/User.html' %}
+{% block base %}
+<!DOCTYPE html>
+<html>
+<head>
+	<title>VIEW LOCATE CLUB</title>
+	</head>
+<body><center><h1>VIEW LOCATE CLUB</h1>
+	<table border="1">
+		<tr>
+			<th>Club Name</th>
+			<th>Location</th>
+		</tr>
+        {% for i in x %}
+		<tr>
+			<td>{{ i.club.clubname}}</td>
+			<td>{{ i.location }}</td>
+		</tr>
+         {% endfor %}
+	</table>
+</center>
+</body>
+</html>
+{% endblock %}

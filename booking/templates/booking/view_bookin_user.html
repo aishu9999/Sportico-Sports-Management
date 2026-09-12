@@ -1,0 +1,36 @@
+{% extends 'temp/User.html' %}
+{% block base %}
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title>VIEW BOOKING</title>
+	</head>
+<body><center><h1>VIEW BOOKING</h1>
+	<table border="1" class="table table-striped" style="width: 60%">
+		<tr>
+			<th>Club Name</th>
+			<th>User Name</th>
+			<th>Camp Name</th>
+			<th>Date</th>
+{#			<th>Location</th>#}
+{#			<th>Time Slot</th>#}
+{#			<th>Payment</th>#}
+		</tr>
+        {% for i in x %}
+		<tr>
+			<td>{{ i.club.clubname }}</td>
+			<td>{{ i.user.username }}</td>
+			<td>{{ i.camp.campname }}</td>
+			<td>{{ i.date }}</td>
+{#			<td>{{ i.location.latitude }}</td>#}
+{#			<td>{{ i.time.time_info }}</td>#}
+{#			<td>{{ i.payment.amount }}</td>#}
+
+		</tr>
+        {% endfor %}
+	</table>
+</center>
+</body>
+</html>
+{% endblock %}

@@ -1,0 +1,39 @@
+{% extends 'temp/User.html' %}
+{% block base %}
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title>VIEW NEWS</title>
+	</head>
+<body>
+<center>
+<h1>VIEW NEWS</h1>
+	<table border="1" class="table table-striped" style="width: 60%">
+		<tr>
+			<th>Date</th>
+            <th>Time</th>
+			<th>Title</th>
+			<th>Content</th>
+
+{#            <th>status</th>#}
+
+		</tr>
+        {% for i in x %}
+		<tr>
+			<td>{{ i.date }}</td>
+            <td>{{ i.time }}</td>
+			<td>{{ i.title }}</td>
+			<td>{{ i.content }}</td>
+
+{#            <td>{{ i.status }}</td>#}
+
+{#			<td><a href="{% url 'apns' idd=i.news_id %}">approve</a></td>#}
+{#			<td><a href="{% url 'rjns' idd=i.news_id %}">reject</a></td>#}
+		</tr>
+         {% endfor %}
+	</table>
+</center>
+</body>
+</html>
+{% endblock %}

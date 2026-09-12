@@ -1,0 +1,16 @@
+__pycache__/
+*.py[cod]
+*.log
+
+.venv/
+venv/
+env/
+
+.env
+
+*.sqlite3
+
+staticfiles/
+.DS_Storesports_management_new.sql
+*.sql
+.idea/

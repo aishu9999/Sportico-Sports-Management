@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>VIEW FACILITIES</title>
+	</head>
+<body><h1>VIEW FACILITIES</h1>
+	<table border="1" class="table table-striped">
+		<tr>
+			<th>Club Name</th>
+			<th>Service</th>
+			<th>Time Slot</th>
+			<th>Equipments</th>
+			<th>Games</th>
+		</tr>
+        {% for i in x %}
+		<tr>
+			<td>{{ i.club.clubname }}</td>
+			<td>{{ i.services }}</td>
+			<td>{{ i.time.time_info }}</td>
+			<td>{{ i.equipments }}</td>
+			<td>{{ i.games }}</td>
+
+		</tr>
+         {% endfor %}
+	</table>
+
+</body>
+</html>

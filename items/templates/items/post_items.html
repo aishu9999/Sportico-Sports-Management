@@ -1,0 +1,42 @@
+{% extends 'temp/Shop.html' %}
+{% block base %}
+<!DOCTYPE html>
+<html>
+<head>
+	<title>ITEM</title>
+</head>
+<body>
+<center>
+	<h1>ITEM</h1>
+<form method="post">
+    {% csrf_token %}
+	<table>
+{#		<tr>#}
+{#			<td>SHOP NAME</td>#}
+{#		<td><SELECT name="sh" required="">#}
+{#        {% for i in x %}#}
+{#            <option value="{{ i.shop_id }}">{{ i.shop_name }}</option>#}
+{#            {% endfor %}#}
+{#        </SELECT></td>#}
+{#	</tr>#}
+	<tr>
+		<td><input type="text" name="name" class="form-control" placeholder="Product Name" required=""></td>
+	</tr>
+    <tr>
+		<td><input type="number" name="price" class="form-control" placeholder="Price" required=""></td>
+	</tr>
+    <tr>
+		<td>
+            <input type="radio" name="rp"  value="purchase" checked="checked">Purchase
+            <input type="radio" name="rp"  value="Rent">Rent
+        </td>
+	</tr>
+	<tr>
+        <td><input type="submit" class="form-control btn-primary" value="Add"></td>
+    </tr>
+    </table>
+	</form>
+</center>
+</body>
+</html>
+{% endblock %}

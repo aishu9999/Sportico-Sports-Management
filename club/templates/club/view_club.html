@@ -1,0 +1,40 @@
+
+{% extends 'temp/admin.html' %}
+{% block base %}
+<!DOCTYPE html>
+<html>
+<head>
+	<title>VIEW CLUB</title>
+	</head>
+<body><center><h1>VIEW CLUB</h1>
+	<table border="1" class="table table-striped">
+		<tr>
+			<th>Club name</th>
+			<th>Address</th>
+			<th>Head</th>
+			<th>Service</th>
+			<th>Contact</th>
+			<th>Email Id</th>
+            <th></th>
+            <th></th>
+
+		</tr>
+        {% for i in x %}
+		<tr>
+			<td>{{ i.clubname }}</td>
+			<td>{{ i.address }}</td>
+			<td>{{ i.head }}</td>
+			<td>{{ i.service }}</td>
+			<td>{{ i.contact }}</td>
+			<td>{{ i.email_id }}</td>
+
+		    <td><a href="/club/ aprclub/{{ i.club_id }}/#ff" class="btn btn-outline-success">approve</a> </td>
+			<td><a href="/club/ rejclub/{{ i.club_id }}/ff" class="btn btn-outline-danger">reject</a></td>
+
+		</tr>
+         {% endfor %}
+	</table>
+</center>
+</body>
+</html>
+{% endblock %}

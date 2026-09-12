@@ -1,0 +1,17 @@
+{% extends 'temp/Trainer.html' %}
+{% block base %}
+    <center>
+    <h1>Upload Training Videos</h1>
+    <form method="post" enctype="multipart/form-data">
+    {% csrf_token %}
+    <table>
+        <tr>
+           <td> <input type="file" name="img"></td>
+        </tr>
+        <tr>
+            <td><input type="submit"></td>
+        </tr>
+    </table>
+    </form>
+    </center>
+{% endblock %}

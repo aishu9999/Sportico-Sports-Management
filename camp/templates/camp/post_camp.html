@@ -1,0 +1,61 @@
+{% extends 'temp/Club Manager.html' %}
+{% block base %}
+<!DOCTYPE html>
+<html>
+<head>
+	<title>CAMP</title>
+</head>
+<body>
+<center>
+	<h1>CAMP</h1>
+<form method="post">
+    {% csrf_token %}
+	<table>
+{#        <tr>#}
+{#			<td>CLUB NAME</td>#}
+{#		<td><SELECT name="cl" required="">#}
+{#        {% for i in x %}#}
+{#            <option value="{{ i.club_id }}">{{ i.clubname }}</option>#}
+{#            {% endfor %}#}
+{#        </SELECT></td>#}
+{#	</tr>#}
+
+	<tr>
+			<td>CAMP NAME </td>
+		<td><input type="text" name="campname" class="form-control" placeholder="Camp Name" required=""></td>
+	</tr>
+	<tr>
+			<td>INCHARGE </td>
+		<td><input type="text" name="incharge" class="form-control" placeholder="Incharge" required=""></td>
+	</tr>
+	<tr>
+			<td>TIME </td>
+		<td><input type="time" name="time"  class="form-control" required=""></td>
+
+	</tr>
+	<tr>
+			<td>DATE </td>
+		<td><input type="date" name="date" required="" class="form-control"></td>
+
+	</tr>
+	<tr>
+			<td>CATEGORY </td>
+		<td><input type="text" name="category" class="form-control" placeholder="Category" required=""></td>
+
+	</tr>
+
+	<tr>
+			<td></td>
+			<td><input type="submit" class="btn-primary form-control" value="submit"></td>
+		</tr>
+		</table>
+  {% if msg != '' %}
+    <script>
+        alert('Successfully registered')
+    </script>
+    {% endif %}
+	</form>
+</center>
+</body>
+</html>
+{% endblock %}

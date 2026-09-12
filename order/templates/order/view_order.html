@@ -1,0 +1,36 @@
+{% extends 'temp/Shop.html' %}
+{% block base %}
+<!DOCTYPE html>
+<html>
+<head>
+	<title>VIEW ORDER</title>
+	</head>
+<body><center><h1>VIEW ORDER</h1>
+	<table border="1" class="table table-striped" >
+		<tr>
+{#			<th>Shop Name</th>#}
+			<th>Product </th>
+			<th>User Name</th>
+            <th>Addres</th>
+			<th>Payment </th>
+			<th>Date</th>
+			<th>Time</th>
+            <th></th>
+		</tr>
+        {% for i in x %}
+		<tr>
+{#			<td>{{ i.shop.shop_name}}</td>#}
+			<td>{{ i.product.name }}</td>
+			<td>{{ i.user.username }}</td>
+            <td>{{ i.user.address }}</td>
+			<td>Rs.{{ i.payment.amount }}/-</td>
+			<td>{{ i.date }}</td>
+			<td>{{ i.time }}</td>
+		    <td><a href="/delivery/del/{{ i.order_id }}/#dd" class="btn btn-outline-success">Delivery</a> </td>
+        </tr>
+         {% endfor %}
+	</table>
+</center>
+</body>
+</html>
+{% endblock %}

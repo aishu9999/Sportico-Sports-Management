@@ -1,0 +1,35 @@
+{% extends 'temp/User.html' %}
+{% block base %}
+<!DOCTYPE html>
+<html>
+<head>
+	<title>VIEW TRAINER</title>
+	</head>
+<body><center><h1>VIEW TRAINER</h1>
+	<table border="1" class="table table-striped" style="width: 80%">
+		<tr>
+			<th>Name</th>
+			<th>Gender</th>
+			<th>Field</th>
+			<th>Time Slot</th>
+            <th>Payment</th>
+
+		</tr>
+        {% for i in x %}
+		<tr>
+			<td>{{ i.name }}</td>
+			<td>{{ i.gender }}</td>
+			<td>{{ i.field }}</td>
+			<td>{{ i.time_info }}</td>
+            <td>{{ i.payment }}</td>
+            <td><a href="/appointment/papp/{{ i.trainer_id }}/#ff" class="btn btn-outline-success" >Appointment</a></td>
+
+{#			<td><a href="{% url 'aprv' idd=i.trainer_id %}">approve</a></td>#}
+{#			<td><a href="{% url 'rjct' idd=i.trainer_id %}">reject</a></td>#}
+		</tr>
+         {% endfor %}
+	</table>
+</center>
+</body>
+</html>
+{% endblock %}

@@ -1,0 +1,40 @@
+
+{% extends 'temp/User.html' %}
+{% block base %}
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title>VIEW SHOP</title>
+	</head>
+<body><center><h1>VIEW SHOP</h1>
+	<table border="1" class="table table-striped">
+		<tr>
+			<th>Shop name</th>
+			<th>Item Name</th>
+			<th>Rent/Purchase</th>
+			<th>Price</th>
+			<th>Stock</th>
+			<th>Rating</th>
+{#            <th>Status</th>#}
+
+		</tr>
+        {% for i in x %}
+		<tr>
+			<td>{{ i.shop_name }}</td>
+			<td>{{ i.item_name }}</td>
+			<td>{{ i.rent_purchase }}</td>
+			<td>{{ i.price }}</td>
+			<td>{{ i.stock }}</td>
+			<td>{{ i.rating }}</td>
+{#            <td>{{ i.status }}</td>#}
+
+			<td><a href="/order/porder/{{ i.shop_id }}">order</a></td>
+
+		</tr>
+         {% endfor %}
+	</table>
+</center>
+</body>
+</html>
+{% endblock %}

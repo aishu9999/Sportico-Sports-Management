@@ -1,0 +1,23 @@
+{% extends 'temp/User.html' %}
+{% block base %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<center>
+    <h1>Watch</h1>
+    <a href="/trainer_register/view/#ff" class="btn btn-primary">Go Back</a>
+    <br>
+        <video controls="controls" width="500px;" height="500px;">
+    <source src="/static/{{ kk.video }}" type="video/mp4">
+    </video>
+
+</center>
+</body>
+</html>
+
+{% endblock %}

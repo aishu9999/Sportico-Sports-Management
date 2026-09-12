@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Location</title>
+</head>
+<body>
+<body><h1>VIEW LOCATION</h1>
+	<table border="1">
+		<tr>
+
+			<th>Club Name</th>
+			<th>Latitude</th>
+			<th>Longitude</th>
+		</tr>
+        {% for i in x %}
+		<tr>
+
+			<td>{{ i.club.clubname}}</td>
+			<td>{{ i.latitude }}</td>
+			<td>{{ i.longitude }}</td>
+		</tr>
+         {% endfor %}
+	</table>
+
+</body>
+</html>
